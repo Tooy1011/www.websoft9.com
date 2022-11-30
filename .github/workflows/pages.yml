@@ -86,18 +86,6 @@ jobs:
           message: 'update public'
           tag_push: '--force'
           
-#       - name: commit data
-#         run: |
-#           git config --global user.email "330282372@qqcom"
-#           git config --global user.name "Tooy1011"
-#           git add ./public
-#           git commit -m "push the public directory" -a
-          
-#       - name: Push changes
-#         uses: ad-m/github-push-action@master
-#         with:
-#           github_token: ${{ secrets.GITHUB_TOKEN }}
-
 #       - id: push
 #         uses: stefanzweifel/git-auto-commit-action@v4
 #         with:
