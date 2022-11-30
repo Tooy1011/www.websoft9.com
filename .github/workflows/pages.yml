@@ -78,6 +78,13 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./source/public
+      
+      - name: add and commit
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: './source/public'
+          message: 'update public'
+          tag_push: '--force'
           
 #       - name: commit data
 #         run: |
@@ -90,10 +97,11 @@ jobs:
 #         uses: ad-m/github-push-action@master
 #         with:
 #           github_token: ${{ secrets.GITHUB_TOKEN }}
-      - id: push
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "update public"
+
+#       - id: push
+#         uses: stefanzweifel/git-auto-commit-action@v4
+#         with:
+#           commit_message: "update public"
           
           
 
